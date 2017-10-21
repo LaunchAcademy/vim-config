@@ -100,7 +100,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'epmatsw/ag.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'henrik/vim-qargs'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 "
 " Navigation
