@@ -159,3 +159,14 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 au BufRead,BufNewFile *.hamlc set ft=haml
+
+Plugin 'junegunn/goyo.vim'
+function! ProseMode()
+  call goyo#execute(0, [])
+  set spell noci nosi noai nolist noshowmode noshowcmd
+  set complete+=s
+  set bg=light
+  colors solarized
+endfunction
+
+command! ProseMode call ProseMode()
