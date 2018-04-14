@@ -100,7 +100,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'epmatsw/ag.vim'
 Plugin 'tpope/vim-abolish'
 Plugin 'henrik/vim-qargs'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 "
 " Navigation
@@ -126,6 +127,7 @@ Plugin 'rosstimson/scala-vim-support'
 Plugin 'guns/vim-clojure-static'
 Plugin 'chrisbra/csv.vim'
 Plugin 'elzr/vim-json'
+Plugin 'isRuslan/vim-es6'
 
 "
 " Development Tool Integration
@@ -158,3 +160,14 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 au BufRead,BufNewFile *.hamlc set ft=haml
+
+Plugin 'junegunn/goyo.vim'
+function! ProseMode()
+  call goyo#execute(0, [])
+  set spell noci nosi noai nolist noshowmode noshowcmd
+  set complete+=s
+  set bg=light
+  colors solarized
+endfunction
+
+command! ProseMode call ProseMode()
